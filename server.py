@@ -38,5 +38,5 @@ def verify_signature(payload_body, signature):
 
 if __name__ == '__main__':
     public_url = ngrok.connect(8000).public_url
-    print(public_url)
+    print('Public URL: ', public_url)
     uvicorn.run("server:app", host="0.0.0.0", port=8000, reload=True)
